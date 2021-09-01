@@ -53,6 +53,7 @@ measurements = np.append(X, Z)  # create data vector
 theta = (pi/180)*(90-latit)
 phi = (pi/180)*longit
 
+# The need for normalised polynomials is unclear in the lab script.
 # format is generic coefficents * associated legendre polynomials
 kernel[:N, 0] = -sin(theta)  # g_1^0
 kernel[:N, 1] = cos(phi) * cos(theta)  # g_1^1
@@ -294,3 +295,5 @@ print('Intersect surface at {} deg lat and {} deg long'.format(
 
 print('Intersect surface at {} deg lat and {} deg long'.format(
     -latitude(derived['I']), longitude(derived['Ie']-pi)))
+
+print('Offset: {}'.format(R*gauss['g20']/2/gauss['g10']))
