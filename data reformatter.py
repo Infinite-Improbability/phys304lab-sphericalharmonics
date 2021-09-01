@@ -5,7 +5,7 @@ conversion_factor = 9500 # nanoteslas per volt
 
 # Import csv and turn into a list of lists, where each inner list is a row.
 raw = []
-with open("ugly_data.csv") as f:
+with open("raw_data.csv") as f:
      reader = csv.reader(f)
      for row in reader:
          raw.append(row)
